@@ -9,61 +9,75 @@ export type TaskPageVoice = {
   chips: string[]
 }
 
+/*
+  Display-label vocabulary (user-visible):
+    listing → Local Directory
+    pdf     → Reference Library
+  Task keys and route paths are unchanged.
+*/
+
 export const taskPageVoices = {
   article: {
-    eyebrow: 'Reading desk',
-    headline: 'Long-form articles with a calmer editorial rhythm.',
-    description: 'Use this page for essays, guides, explainers, and story-led posts. The layout should feel like a publication, not a directory.',
-    filterLabel: 'Choose article topic',
-    secondaryNote: 'Reading surfaces need space, hierarchy, and fewer distractions.',
-    chips: ['Editorial pacing', 'Topic filters', 'Long-read friendly'],
+    eyebrow: 'Editorial desk',
+    headline: 'Slow reads and field notes, one careful paragraph at a time.',
+    description:
+      'Long-form perspective from the platform — features, guides and quiet essays worth sitting with for a moment.',
+    filterLabel: 'Filter reading topic',
+    secondaryNote: 'Editorial pieces are paced for a proper read, not a scroll.',
+    chips: ['Editorial pacing', 'Long reads', 'Field notes'],
   },
   classified: {
-    eyebrow: 'Notice board',
-    headline: 'Fast-moving classifieds, offers, and time-sensitive posts.',
-    description: 'Classified content should feel quick to scan, practical, and action-oriented with less editorial decoration.',
-    filterLabel: 'Filter classified category',
-    secondaryNote: 'Prioritize urgency, short summaries, and direct browsing.',
-    chips: ['Fast scan', 'Offers', 'Action cues'],
+    eyebrow: 'Community board',
+    headline: 'A fast-moving community board — fresh offers, swaps and notices.',
+    description:
+      'Time-sensitive posts that neighbours actually act on. Scan, tap, done.',
+    filterLabel: 'Filter category',
+    secondaryNote: 'Quick to scan, clear to act on.',
+    chips: ['Fresh today', 'Community swaps', 'Direct action'],
   },
   sbm: {
-    eyebrow: 'Saved resources',
-    headline: 'Social bookmarks arranged like curated collections.',
-    description: 'Bookmark pages should feel like shelves of useful resources, tools, references, and collections.',
-    filterLabel: 'Filter collection',
-    secondaryNote: 'Curated resources need grouping and calm metadata.',
-    chips: ['Collections', 'Resources', 'Reference flow'],
+    eyebrow: 'Saved shelf',
+    headline: 'A curated shelf of links, tools and references worth keeping.',
+    description:
+      'Bookmarks, resources and quiet recommendations arranged like a small useful library.',
+    filterLabel: 'Filter shelf',
+    secondaryNote: 'Curated, categorised, and always warm to browse.',
+    chips: ['Curated links', 'Everyday tools', 'Reference flow'],
   },
   profile: {
-    eyebrow: 'People and profiles',
-    headline: 'Profiles with identity, trust, and reputation cues.',
-    description: 'Profile pages should make people, brands, and entities feel discoverable rather than buried in a generic feed.',
-    filterLabel: 'Filter profile category',
-    secondaryNote: 'Make identity and credibility visible before the grid begins.',
-    chips: ['Identity first', 'Trust cues', 'Creator/business cards'],
+    eyebrow: 'People & makers',
+    headline: 'The independents, small teams and quiet creators behind the work.',
+    description:
+      'Profiles built for trust — plain identity, real work, honest links.',
+    filterLabel: 'Filter profile',
+    secondaryNote: 'Identity first. Work second. No noise.',
+    chips: ['Independents', 'Verified identity', 'Real portfolios'],
   },
   pdf: {
-    eyebrow: 'Document library',
-    headline: 'PDFs and documents presented as a useful library.',
-    description: 'PDF pages should feel like downloadable guides, reports, files, and reference material instead of normal articles.',
-    filterLabel: 'Filter document type',
-    secondaryNote: 'Document surfaces need archive cues, file context, and clear browsing.',
-    chips: ['Documents', 'Guides', 'Archive ready'],
+    eyebrow: 'Reference Library',
+    headline: 'A reference library of downloadable guides, primers and briefs.',
+    description:
+      'Printer-friendly briefs, field guides and quick references — everything sourced, everything free to open.',
+    filterLabel: 'Filter reference',
+    secondaryNote: 'Ready to open. Ready to print. No signup wall.',
+    chips: ['Field guides', 'Printer-friendly', 'Free to open'],
   },
   listing: {
-    eyebrow: 'Business directory',
-    headline: 'Business listings built for discovery and comparison.',
-    description: 'Listing pages should behave like a directory with trust cues, metadata, and a practical search rhythm.',
-    filterLabel: 'Filter business category',
-    secondaryNote: 'Prioritize comparison, location, and direct action paths.',
-    chips: ['Directory', 'Compare', 'Business discovery'],
+    eyebrow: 'Local Directory',
+    headline: 'A warm local directory of the places locals actually recommend.',
+    description:
+      'Verified businesses, quick facts and honest contact details — the neighbourhood you would show a visitor.',
+    filterLabel: 'Filter neighbourhood',
+    secondaryNote: 'Verified addresses. Verified hours. Real recommendations.',
+    chips: ['Verified places', 'Real hours', 'Local favourites'],
   },
   image: {
-    eyebrow: 'Visual gallery',
-    headline: 'Image posts with a gallery-first browsing experience.',
-    description: 'Image pages should lead with visual impact, stronger cards, and a portfolio-like rhythm.',
-    filterLabel: 'Filter visual category',
-    secondaryNote: 'Let images carry the page before long text does.',
-    chips: ['Gallery', 'Visual-first', 'Portfolio mood'],
+    eyebrow: 'Field gallery',
+    headline: 'A visual reel of storefronts, streets and standout moments.',
+    description:
+      'Image-led posts that let the light and the frame do most of the talking.',
+    filterLabel: 'Filter visual',
+    secondaryNote: 'Photography first. Copy holds the door.',
+    chips: ['Storefronts', 'Street level', 'Portfolio mood'],
   },
 } satisfies Record<TaskKey, TaskPageVoice>
